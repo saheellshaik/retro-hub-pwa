@@ -43,6 +43,17 @@ function updateSelection() {
 }
 updateSelection(); // Initial highlight
 
+// Add click listeners to buttons for mouse/touch support
+buttons.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+        if (!gameLoaded) {
+            selectedIndex = index; // Sync selection
+            updateSelection();
+            loadGame(btn.getAttribute('onclick').match(/'(\w+)'/)[1]);
+        }
+    });
+});
+
 // Keyboard navigation for menu
 document.addEventListener('keydown', (e) => {
     if (gameLoaded) {
