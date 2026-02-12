@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Hub v.10.1</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Retro Hub v.10.1</h1>
+        <div id="status-bar">
+            <span id="time">Loading time...</span>
+            <span id="battery">Battery: --%</span>
+        </div>
+    </header>
+    <main>
+        <div id="game-menu">
+            <button onclick="loadGame('snake')">Snake X</button>
+            <button onclick="loadGame('flappy')">Flappy Bird</button>
+            <button onclick="loadGame('mario')">Mario</button>
+            <button onclick="loadGame('geometry')">Geometry Dash</button>
+        </div>
+        <div id="game-container"></div>
+    </main>
+    <script src="js/app.js"></script>
+</body>
+</html>
